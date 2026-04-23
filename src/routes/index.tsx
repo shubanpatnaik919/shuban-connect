@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowUpRight, Sparkles, Music, Code2, Map, Rocket, Video, Shield, Lock, Smartphone } from "lucide-react";
+import { ArrowUpRight, Sparkles, Music, Code2, Map, Rocket, Video, Shield, Lock, Smartphone, Brain } from "lucide-react";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -63,6 +63,13 @@ const apps = [
     description: "Generate stunning images and videos from a prompt.",
     url: "https://imvid-ai.vercel.app",
     icon: Video,
+  },
+  {
+    name: "Shuban AI",
+    tag: "Assistant",
+    description: "The flagship Shuban AI assistant — versatile and conversational.",
+    url: "https://shubanai1-19.vercel.app",
+    icon: Brain,
   },
 ];
 
