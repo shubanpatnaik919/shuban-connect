@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowUpRight, Sparkles, Music, Code2, Map, Rocket, Video, Lock, Smartphone, Brain, User } from "lucide-react";
+import { ArrowUpRight, Sparkles, Music, Code2, Map, Rocket, Video, Lock, Smartphone, Brain, User, Apple, Monitor } from "lucide-react";
 import { useAuth } from "@/lib/auth-context";
 import { ThemeToggle } from "@/components/theme-toggle";
 import shubanLogo from "@/assets/shuban-logo.png";
@@ -124,6 +124,11 @@ function Index() {
             <ThemeToggle />
           </div>
           <div className="mx-auto max-w-3xl text-center">
+            <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-border bg-background px-3 py-1 text-xs font-medium text-muted-foreground">
+              <Apple className="h-3 w-3" />
+              Available on Apple, Android and Windows
+              <Monitor className="h-3 w-3" />
+            </div>
             <div className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-3 py-1 text-xs font-medium text-muted-foreground">
               <Lock className="h-3 w-3" />
               One identity. Every Shuban app.
