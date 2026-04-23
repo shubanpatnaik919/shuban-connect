@@ -4,7 +4,8 @@ import { z } from "zod";
 import { supabase } from "@/integrations/supabase/client";
 import { lovable } from "@/integrations/lovable";
 import { useAuth } from "@/lib/auth-context";
-import { Shield, ArrowLeft, Loader2 } from "lucide-react";
+import { ArrowLeft, Loader2 } from "lucide-react";
+import shubanLogo from "@/assets/shuban-logo.png";
 
 export const Route = createFileRoute("/auth")({
   head: () => ({
@@ -117,9 +118,7 @@ function AuthPage() {
       <header className="border-b border-border">
         <div className="mx-auto flex max-w-md items-center justify-between px-6 py-4">
           <Link to="/" className="flex items-center gap-2">
-            <div className="flex h-8 w-8 items-center justify-center rounded-md bg-primary">
-              <Shield className="h-4 w-4 text-primary-foreground" />
-            </div>
+            <img src={shubanLogo} alt="Shuban Authentication logo" className="h-8 w-8 rounded-md object-cover" />
             <span className="font-semibold tracking-tight">Shuban</span>
           </Link>
           <Link

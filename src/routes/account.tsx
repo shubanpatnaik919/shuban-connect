@@ -2,7 +2,8 @@ import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuth } from "@/lib/auth-context";
-import { Shield, ArrowLeft, LogOut, Loader2, Check } from "lucide-react";
+import { ArrowLeft, LogOut, Loader2, Check } from "lucide-react";
+import shubanLogo from "@/assets/shuban-logo.png";
 
 export const Route = createFileRoute("/account")({
   head: () => ({
@@ -84,9 +85,7 @@ function AccountPage() {
       <header className="sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur-xl">
         <div className="mx-auto flex max-w-3xl items-center justify-between px-6 py-4">
           <Link to="/" className="flex items-center gap-2">
-            <div className="flex h-8 w-8 items-center justify-center rounded-md bg-primary">
-              <Shield className="h-4 w-4 text-primary-foreground" />
-            </div>
+            <img src={shubanLogo} alt="Shuban Authentication logo" className="h-8 w-8 rounded-md object-cover" />
             <span className="font-semibold tracking-tight">Shuban Authentication</span>
           </Link>
           <Link

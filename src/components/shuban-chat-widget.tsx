@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
-import { MessageCircle, X, Send, Shield, Loader2 } from "lucide-react";
+import { MessageCircle, X, Send, Loader2 } from "lucide-react";
+import shubanLogo from "@/assets/shuban-logo.png";
 
 type Msg = { role: "user" | "assistant"; content: string };
 
@@ -125,9 +126,7 @@ export function ShubanChatWidget() {
         <div className="fixed bottom-24 right-5 z-50 flex h-[70vh] max-h-[560px] w-[calc(100vw-2.5rem)] max-w-sm flex-col overflow-hidden rounded-2xl border border-border bg-card shadow-2xl">
           {/* Header */}
           <div className="flex items-center gap-3 border-b border-border bg-background px-4 py-3">
-            <div className="flex h-8 w-8 items-center justify-center rounded-md bg-primary">
-              <Shield className="h-4 w-4 text-primary-foreground" />
-            </div>
+            <img src={shubanLogo} alt="Shuban logo" className="h-8 w-8 rounded-md object-cover" />
             <div className="flex-1">
               <p className="text-sm font-semibold">Shuban Assistant</p>
               <p className="text-xs text-muted-foreground">Ask about Shuban Authentication</p>
