@@ -1,1 +1,4 @@
 project_id = "rudvoqxdoxiopafuctur"
+
+[functions.shuban-chat]
+verify_jwt = false
