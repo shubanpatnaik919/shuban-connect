@@ -2,6 +2,7 @@ import { Outlet, Link, createRootRoute, HeadContent, Scripts } from "@tanstack/r
 
 import appCss from "../styles.css?url";
 import { InstallPrompt } from "@/components/install-prompt";
+import { ShubanChatWidget } from "@/components/shuban-chat-widget";
 import { AuthProvider } from "@/lib/auth-context";
 
 function NotFoundComponent() {
@@ -90,6 +91,7 @@ function RootComponent() {
     <AuthProvider>
       <Outlet />
       <InstallPrompt />
+      <ShubanChatWidget />
     </AuthProvider>
   );
 }
