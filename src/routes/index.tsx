@@ -165,7 +165,7 @@ function Index() {
           <div className="mb-12 flex items-end justify-between">
             <div>
               <p className="text-sm font-medium text-muted-foreground">All apps</p>
-              <h2 className="mt-2 text-4xl font-bold tracking-tight">Six tools. One sign-in.</h2>
+              <h2 className="mt-2 text-4xl font-bold tracking-tight">Seven tools. One sign-in.</h2>
             </div>
           </div>
 
