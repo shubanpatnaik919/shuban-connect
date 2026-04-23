@@ -52,6 +52,12 @@ export const Route = createRootRoute({
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
+      { name: "twitter:title", content: "Shuban Authentication" },
+      { name: "description", content: "Shuban Connect is a unified platform that links multiple AI-powered applications and services." },
+      { property: "og:description", content: "Shuban Connect is a unified platform that links multiple AI-powered applications and services." },
+      { name: "twitter:description", content: "Shuban Connect is a unified platform that links multiple AI-powered applications and services." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/1a046612-49d4-4905-aace-37719b9874bf/id-preview-a6c7c3a2--e3c8fc84-1a31-4c76-b924-4448fc0afde0.lovable.app-1776955484167.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/1a046612-49d4-4905-aace-37719b9874bf/id-preview-a6c7c3a2--e3c8fc84-1a31-4c76-b924-4448fc0afde0.lovable.app-1776955484167.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
