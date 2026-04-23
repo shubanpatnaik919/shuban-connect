@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowUpRight, Sparkles, Music, Code2, Map, Rocket, Video, Shield, Lock, Smartphone, Brain } from "lucide-react";
+import { ArrowUpRight, Sparkles, Music, Code2, Map, Rocket, Video, Shield, Lock, Smartphone, Brain, User } from "lucide-react";
+import { useAuth } from "@/lib/auth-context";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -74,6 +75,7 @@ const apps = [
 ];
 
 function Index() {
+  const { user } = useAuth();
   return (
     <div className="min-h-screen bg-background text-foreground">
       {/* Nav */}
@@ -85,22 +87,31 @@ function Index() {
             </div>
             <span className="font-semibold tracking-tight">Shuban Authentication</span>
           </Link>
-          <nav className="hidden items-center gap-8 text-sm md:flex">
+          <nav className="hidden items-center gap-6 text-sm md:flex">
             <a href="#apps" className="text-muted-foreground transition hover:text-foreground">
               Apps
             </a>
             <Link to="/connect" className="text-muted-foreground transition hover:text-foreground">
-              Connect device
+              Connect
             </Link>
             <Link to="/install" className="text-muted-foreground transition hover:text-foreground">
               Install
             </Link>
-            <Link
-              to="/connect"
-              className="rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition hover:bg-primary/90"
-            >
-              Connect this device
-            </Link>
+            {user ? (
+              <Link
+                to="/account"
+                className="inline-flex items-center gap-2 rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition hover:bg-primary/90"
+              >
+                <User className="h-4 w-4" /> Account
+              </Link>
+            ) : (
+              <Link
+                to="/auth"
+                className="rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition hover:bg-primary/90"
+              >
+                Sign in
+              </Link>
+            )}
           </nav>
         </div>
       </header>
